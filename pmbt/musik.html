@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Alat Musik Tradisional Indonesia - Nusantara Heritage" />
+        <meta name="author" content="Nusantara Heritage" />
+        <title>Alat Musik Tradisional - Nusantara Heritage</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <style>
+            body { 
+                font-family: 'Poppins', sans-serif; 
+            }
+            
+            .batik-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='15' cy='15' r='8'/%3E%3Ccircle cx='45' cy='15' r='8'/%3E%3Ccircle cx='15' cy='45' r='8'/%3E%3Ccircle cx='45' cy='45' r='8'/%3E%3Cpath d='M30 10 L35 20 L30 30 L25 20 Z'/%3E%3Cpath d='M10 30 L20 35 L30 30 L20 25 Z'/%3E%3Cpath d='M30 50 L35 40 L30 30 L25 40 Z'/%3E%3Cpath d='M50 30 L40 35 L30 30 L40 25 Z'/%3E%3C/g%3E%3C/svg%3E");
+            }
+            
+            .hero-gradient {
+                background: linear-gradient(135deg, #1e40af 0%, #3b82f6 25%, #60a5fa 50%, #7c3aed 75%, #1e40af 100%);
+            }
+            
+            .music-decorative {
+                background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237c3aed' fill-opacity='0.15'%3E%3Ccircle cx='20' cy='20' r='8'/%3E%3Ccircle cx='60' cy='20' r='8'/%3E%3Ccircle cx='20' cy='60' r='8'/%3E%3Ccircle cx='60' cy='60' r='8'/%3E%3Cpath d='M40 10 Q50 20 40 30 Q30 20 40 10'/%3E%3Cpath d='M10 40 Q20 50 30 40 Q20 30 10 40'/%3E%3Cpath d='M50 40 Q60 50 70 40 Q60 30 50 40'/%3E%3Cpath d='M40 50 Q50 60 40 70 Q30 60 40 50'/%3E%3C/g%3E%3C/svg%3E");
+            }
+            
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+            
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+            
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            
+            .navbar-brand {
+                background: linear-gradient(135deg, #DC143C, #FFD700);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+            
+            .navbar {
+                background-color: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            }
+            
+            .nav-link {
+                color: #333 !important;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+            
+            .nav-link:hover {
+                color: #DC143C !important;
+            }
+            
+            .nav-link.active {
+                color: #3b82f6 !important;
+                font-weight: 600;
+            }
+            
+            .masthead {
+                min-height: 50vh;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .site-heading h1 {
+                font-size: 3.5rem;
+                color: #FFD700;
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            .site-heading .subheading {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 1.2rem;
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            }
+            
+            .music-card {
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .music-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            }
+            
+            .music-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 5px;
+                background: linear-gradient(135deg, #3b82f6, #7c3aed);
+            }
+            
+            .music-icon {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1.5rem;
+                font-size: 2.5rem;
+                color: white;
+                position: relative;
+            }
+            
+            .gamelan-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+            .angklung-icon { background: linear-gradient(135deg, #10b981, #059669); }
+            .sasando-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+            .kendang-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+            .gong-icon { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+            .suling-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+            
+            .region-badge {
+                background: linear-gradient(135deg, #f59e0b, #d97706);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                display: inline-block;
+                margin-bottom: 1rem;
+            }
+            
+            .btn-primary {
+                background: linear-gradient(135deg, #3b82f6, #7c3aed);
+                border: none;
+                border-radius: 25px;
+                padding: 12px 30px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+            }
+            
+            .btn-primary:hover {
+                background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+            }
+            
+            .floating-elements {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            
+            .floating-element {
+                position: absolute;
+                opacity: 0.3;
+                animation: float 8s ease-in-out infinite;
+            }
+            
+            .floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: -1s; }
+            .floating-element:nth-child(2) { top: 30%; right: 15%; animation-delay: -2s; }
+            .floating-element:nth-child(3) { bottom: 20%; right: 20%; animation-delay: -3s; }
+            .floating-element:nth-child(4) { bottom: 30%; left: 15%; animation-delay: -4s; }
+            
+            footer {
+                background: linear-gradient(135deg, #1f2937, #111827);
+                color: white;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 10px;
+                transition: all 0.3s ease;
+            }
+            
+            .social-icon:hover {
+                transform: translateY(-3px);
+            }
+            
+            .social-facebook { background: linear-gradient(135deg, #4267B2, #365899); }
+            .social-twitter { background: linear-gradient(135deg, #1DA1F2, #1991DA); }
+            .social-instagram { background: linear-gradient(135deg, #E4405F, #C13584); }
+            
+            .breadcrumb {
+                background: none;
+                padding: 0;
+            }
+            
+            .breadcrumb-item + .breadcrumb-item::before {
+                color: #6b7280;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.php">
+                    <i class="fas fa-circle me-2" style="color: #DC143C;"></i>
+                    Nusantara Heritage
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Beranda</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4 active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Budaya
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="batik.html">Batik</a></li>
+                                <li><a class="dropdown-item active" href="musik.html">Alat Musik</a></li>
+                                <li><a class="dropdown-item" href="tari.html">Tari Tradisional</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sejarah.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Page Header-->
+        <header class="masthead hero-gradient d-flex align-items-center">
+            <div class="batik-pattern position-absolute w-100 h-100"></div>
+            <div class="music-decorative position-absolute w-100 h-100" style="opacity: 0.3;"></div>
+            
+            <div class="floating-elements">
+                <div class="floating-element">
+                    <i class="fas fa-music text-warning" style="font-size: 2rem;"></i>
+                </div>
+                <div class="floating-element">
+                    <i class="fas fa-drum text-warning" style="font-size: 1.5rem;"></i>
+                </div>
+                <div class="floating-element">
+                    <i class="fas fa-guitar text-warning" style="font-size: 1.8rem;"></i>
+                </div>
+                <div class="floating-element">
+                    <i class="fas fa-bell text-warning" style="font-size: 1.6rem;"></i>
+                </div>
+            </div>
+            
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading text-center">
+                            <h1>Alat Musik Tradisional</h1>
+                            <hr class="my-4" style="border-color: #FFD700; border-width: 3px;">
+                            <span class="subheading">
+                                Harmoni suara alam dan budaya Nusantara yang mempesona jiwa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5 my-5">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Budaya</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Alat Musik</li>
+                </ol>
+            </nav>
+            
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-12">
+                    <div class="text-center mb-5">
+                        <h2 class="display-4 fw-bold text-dark mb-4">Kekayaan Musik Nusantara</h2>
+                        <p class="lead text-muted">Alat musik tradisional yang menjadi warisan budaya tak ternilai</p>
+                    </div>
+                    
+                    <div class="row g-4 mb-5">
+                        <!-- Gamelan -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs9Owa4U0nLnr9rHWLBGpv9-zpviSWDYxxyg&s" alt="Gamelan" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            
+                                <div class="region-badge">Jawa & Bali</div>
+                                <h3 class="fw-bold mb-3 text-center">Gamelan</h3>
+                                <p class="text-muted mb-4">
+                                    Gamelan adalah ensembel musik tradisional yang terdiri dari berbagai instrumen perkusi logam, kayu, dan bambu. Setiap orkestra gamelan memiliki keunikan nada dan karakter yang mencerminkan filosofi keseimbangan dan harmoni dalam kehidupan.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-primary">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Gamelan telah ada sejak abad ke-8 Masehi pada masa Kerajaan Mataram Kuno. Menurut mitologi Jawa, gamelan diciptakan oleh Sang Hyang Guru untuk memanggil para dewa. Instrumen ini berkembang pesat pada masa Kerajaan Majapahit dan terus dilestarikan hingga kini.
+                                    </p>
+                                    <h6 class="fw-bold text-primary">Instrumen Utama:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Gong - Instrumen utama pemberi nada dasar</li>
+                                        <li>Saron - Metalofon dengan bilah perunggu</li>
+                                        <li>Bonang - Gong kecil berbentuk cembung</li>
+                                        <li>Kendang - Gendang sebagai pengatur irama</li>
+                                        <li>Suling - Instrumen tiup dari bambu</li>
+                                        <li>Gender - Metalofon dengan resonator bambu</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Angklung -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                <img src="data:image/jpeg;base64,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" alt="Angklung" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                <div class="region-badge">Jawa Barat</div>
+                                <h3 class="fw-bold mb-3 text-center">Angklung</h3>
+                                <p class="text-muted mb-4">
+                                    Angklung adalah alat musik multitonal yang terbuat dari bambu, dimainkan dengan cara digoyangkan. Setiap angklung menghasilkan satu nada yang jika dimainkan bersama menciptakan harmoni musik yang memukau. UNESCO mengakuinya sebagai Warisan Budaya Takbenda pada tahun 2010.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-success">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Angklung berasal dari masyarakat Sunda dan telah ada sejak abad ke-15. Awalnya digunakan untuk ritual padi dan upacara keagamaan. Daeng Soetigna pada tahun 1938 mengembangkan angklung diatonik yang dapat memainkan lagu-lagu dari berbagai negara.
+                                    </p>
+                                    <h6 class="fw-bold text-success">Jenis Angklung:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Angklung Kanekes - Tradisional suku Baduy</li>
+                                        <li>Angklung Gubrag - Untuk upacara padi</li>
+                                        <li>Angklung Dogdog Lojor - Angklung besar</li>
+                                        <li>Angklung Diatonik - Modern untuk lagu internasional</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sasando -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                <img src="data:image/jpeg;base64,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" alt="Gamelan" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                <div class="region-badge">Nusa Tenggara Timur</div>
+                                <h3 class="fw-bold mb-3 text-center">Sasando</h3>
+                                <p class="text-muted mb-4">
+                                    Sasando adalah alat musik petik tradisional yang terbuat dari daun lontar kering yang berbentuk seperti harpa. Suara yang dihasilkan sangat khas dan menenangkan, mencerminkan keindahan alam Nusa Tenggara Timur yang eksotis.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-purple">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Sasando berasal dari Pulau Rote, NTT. Menurut legenda, sasando diciptakan oleh seorang penggembala bernama Sangguana yang terinspirasi oleh suara angin yang meniup daun lontar. Alat musik ini menjadi identitas budaya masyarakat Rote.
+                                    </p>
+                                    <h6 class="fw-bold text-purple">Karakteristik:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Terbuat dari bambu dan daun lontar</li>
+                                        <li>Memiliki 28-58 senar logam</li>
+                                        <li>Suara lembut dan merdu</li>
+                                        <li>Dimainkan dengan petikan jari</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Kendang -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                <img src="https://www.giripurwaseni.com/wp-content/uploads/2017/01/Kendang-Ukir-e1642601627379.jpeg" alt="Gamelan" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                <div class="region-badge">Jawa & Bali</div>
+                                <h3 class="fw-bold mb-3 text-center">Kendang</h3>
+                                <p class="text-muted mb-4">
+                                    Kendang adalah instrumen perkusi berbentuk gendang yang menjadi pengatur ritme dalam musik gamelan. Pemain kendang disebut pengendang dan memiliki peran penting dalam mengatur tempo dan dinamika pertunjukan musik tradisional.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-danger">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Kendang telah dikenal sejak zaman Hindu-Buddha di Jawa. Relief candi-candi kuno menunjukkan penggunaan kendang dalam upacara keagamaan. Alat musik ini berkembang menjadi bagian integral dari gamelan Jawa dan Bali.
+                                    </p>
+                                    <h6 class="fw-bold text-danger">Jenis Kendang:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Kendang Ciblon - Kendang kecil untuk iringan vokal</li>
+                                        <li>Kendang Gendhing - Kendang besar untuk musik halus</li>
+                                        <li>Kendang Jaipong - Untuk tari Jaipong</li>
+                                        <li>Kendang Bali - Khusus gamelan Bali</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gong -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                <img src="https://parto.id/asset/foto_produk/b2e0cb01a4c19190b61a3c9be5d4c3e8.jpg" alt="Gamelan" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                <div class="region-badge">Jawa, Bali & Sumatera</div>
+                                <h3 class="fw-bold mb-3 text-center">Gong</h3>
+                                <p class="text-muted mb-4">
+                                    Gong adalah instrumen perkusi logam berbentuk lingkaran yang menghasilkan suara resonan yang khas. Dalam gamelan, gong berfungsi sebagai penanda struktur musikal dan memberikan kedalaman harmoni yang menawan.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-primary">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Gong diperkirakan berasal dari Asia Tenggara sekitar 3000 tahun yang lalu. Di Indonesia, gong telah digunakan sejak zaman prasejarah untuk ritual dan komunikasi antar desa. Teknik pembuatan gong diturunkan secara turun-temurun.
+                                    </p>
+                                    <h6 class="fw-bold text-primary">Jenis Gong:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Gong Ageng - Gong terbesar dalam gamelan</li>
+                                        <li>Gong Suwukan - Gong berukuran sedang</li>
+                                        <li>Kempul - Gong kecil penanda frase</li>
+                                        <li>Gong Kebyar - Khusus gamelan Bali</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Suling -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                <img src="https://tatkala.co/wp-content/uploads/2022/01/mariyana.-gong-suling-sempidi.jpg" alt="Gamelan" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                <div class="region-badge">Seluruh Nusantara</div>
+                                <h3 class="fw-bold mb-3 text-center">Suling</h3>
+                                <p class="text-muted mb-4">
+                                    Suling adalah alat musik tiup yang terbuat dari bambu dengan lubang-lubang nada. Suara suling yang lembut dan merdu sering digunakan untuk mengiringi lagu-lagu tradisional dan memberikan nuansa meditatif dalam pertunjukan musik.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-info">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Suling merupakan salah satu alat musik tertua di dunia. Di Indonesia, suling telah digunakan sejak zaman nenek moyang untuk berbagai keperluan, mulai dari ritual keagamaan hingga hiburan sehari-hari. Setiap daerah memiliki karakteristik suling yang unik.
+                                    </p>
+                                    <h6 class="fw-bold text-info">Variasi Regional:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Suling Sunda - 4 lubang nada</li>
+                                        <li>Suling Jawa - 6 lubang nada</li>
+                                        <li>Suling Bali - Untuk gamelan Bali</li>
+                                        <li>Saluang - Suling Minangkabau</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kecapi -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                <img src="https://www.giripurwaseni.com/wp-content/uploads/2017/01/Kecapi-Siter-Natural-e1642600043400.jpeg" alt="Gamelan" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                <div class="region-badge">Sunda (Jawa Barat)</div>
+                                <h3 class="fw-bold mb-3 text-center">Kecapi</h3>
+                                <p class="text-muted mb-4">
+                                    Kecapi adalah alat musik petik tradisional yang menghasilkan nada lembut dan mendayu. Umumnya dimainkan dalam musik Tembang Sunda untuk mengiringi nyanyian dan puisi.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-success">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Kecapi berasal dari budaya Sunda dan telah digunakan sejak ratusan tahun lalu. Alat ini awalnya digunakan oleh bangsawan sebagai sarana hiburan dan meditasi batin.
+                                    </p>
+                                    <h6 class="fw-bold text-success">Jenis Kecapi:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Kecapi Indung – Kecapi utama berukuran besar</li>
+                                        <li>Kecapi Rincik – Kecapi pengiring berukuran kecil</li>
+                                        <li>Kecapi Modern – Kecapi dengan inovasi bentuk & senar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tanjidor -->
+                        <div class="col-lg-6">
+                            <div class="music-card card-hover">
+                                 <img src="https://pict.sindonews.net/dyn/850/pena/news/2023/01/17/173/998285/asal-usul-tanjidor-bekasi-dari-mantan-budak-yang-membentuk-kelompok-kesenian-okf.jpg" alt="Gamelan" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                <div class="region-badge">Betawi (Jakarta)</div>
+                                <h3 class="fw-bold mb-3 text-center">Tanjidor</h3>
+                                <p class="text-muted mb-4">
+                                    Tanjidor adalah ansambel musik khas Betawi yang menggunakan alat musik tiup dan perkusi. Umumnya dimainkan dalam acara-acara perayaan seperti pernikahan dan arak-arakan budaya.
+                                </p>
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-warning">Sejarah & Asal Usul:</h6>
+                                    <p class="small text-muted mb-3">
+                                        Tanjidor muncul pada masa kolonial Belanda, saat budak-budak pribumi diajarkan memainkan musik Eropa. Kemudian berkembang menjadi seni rakyat Betawi yang unik dan ekspresif.
+                                    </p>
+                                    <h6 class="fw-bold text-warning">Ciri Khas Tanjidor:</h6>
+                                    <ul class="small text-muted">
+                                        <li>Memakai alat tiup seperti klarinet, trompet, dan trombon</li>
+                                        <li>Diiringi drum besar dan simbal</li>
+                                        <li>Berirama ceria dan ritmis</li>
+                                        <li>Sering tampil dalam parade budaya</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            
+
+
+                    
+                    <!-- Feature Section -->
+                    <div class="row g-5 align-items-center mb-5 py-5" style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); border-radius: 20px;">
+                        <div class="col-lg-6 px-4">
+                            <h2 class="display-5 fw-bold text-dark mb-4">Harmoni Budaya Nusantara</h2>
+                            <p class="lead mb-4">
+                                Setiap alat musik tradisional Indonesia memiliki cerita dan makna filosofis yang mendalam. Dari gamelan yang mengajarkan keseimbangan hidup, hingga angklung yang melambangkan gotong royong, musik tradisional kita adalah warisan tak ternilai.
+                            </p>
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                            <i class="fas fa-music fa-sm"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="fw-bold">Pelestarian Digital</h5>
+                                            <p class="text-muted mb-0">Mendokumentasikan setiap nada dan ritme untuk generasi mendatang</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                            <i class="fas fa-users fa-sm"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="fw-bold">Komunitas Musik</h5>
+                                            <p class="text-muted mb-0">Menghubungkan pecinta musik tradisional di seluruh Indonesia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                            <i class="fas fa-graduation-cap fa-sm"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="fw-bold">Edukasi Musik</h5>
+                                            <p class="text-muted mb-0">Program pembelajaran alat musik tradisional untuk semua usia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 px-4">
+                            <div class="card h-100 border-0" style="background: linear-gradient(135deg, #3b82f6, #7c3aed);">
+                                <div class="card-body text-white text-center p-5">
+                                    <div class="mb-4">
+                                        <i class="fas fa-headphones" style="font-size: 4rem; opacity: 0.8;"></i>
+                                    </div>
+                                    <h3 class="card-title fw-bold mb-4">Dengarkan Musik Tradisional</h3>
+                                    <p class="card-text mb-4 fs-5">Nikmati koleksi audio musik tradisional Indonesia dalam kualitas tinggi</p>
+                                    <button class="btn btn-light btn-lg text-primary fw-bold">
+                                        <i class="fas fa-play me-2"></i>
+                                        Putar Sekarang
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation to other sections -->
+                    <div class="row g-4 mt-5">
+                        <div class="col-lg-6">
+                            <div class="card border-0 h-100" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-palette mb-3" style="font-size: 3rem;"></i>
+                                    <h4 class="fw-bold mb-3">Jelajahi Batik</h4>
+                                    <p class="mb-4">Temukan keindahan motif dan makna filosofis batik Indonesia</p>
+                                    <a href="batik.html" class="btn btn-light text-warning fw-bold">
+                                        Lihat Batik
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card border-0 h-100" style="background: linear-gradient(135deg, #ec4899, #dc2626); color: white;">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-hands mb-3" style="font-size: 3rem;"></i>
+                                    <h4 class="fw-bold mb-3">Tari Tradisional</h4>
+                                    <p class="mb-4">Saksikan keanggunan gerakan tari tradisional Nusantara</p>
+                                    <a href="tari.html" class="btn btn-light text-danger fw-bold">
+                                        Lihat Tari
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back to Home -->
+                    <div class="d-flex justify-content-center mt-5 pt-4">
+                        <a class="btn btn-primary btn-lg" href="index.html">
+                            <i class="fas fa-home me-2"></i>
+                            Kembali ke Beranda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer-->
+        <footer class="border-top py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 mb-4">
+                        <h5 class="text-warning fw-bold mb-3">Nusantara Heritage</h5>
+                        <p class="text-light mb-3">Melestarikan dan memperkenalkan kekayaan budaya Indonesia kepada dunia.</p>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Budaya</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="batik.html" class="text-light text-decoration-none">Batik</a></li>
+                            <li><a href="musik.html" class="text-light text-decoration-none">Alat Musik</a></li>
+                            <li><a href="tari.html" class="text-light text-decoration-none">Tari Tradisional</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Informasi</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="sejarah.html" class="text-light text-decoration-none">Sejarah</a></li>
+                            <li><a href="contact.html" class="text-light text-decoration-none">Kontak</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Ikuti Kami</h6>
+                        <div class="text-center">
+                            <a href="#!" class="social-icon social-facebook text-white text-decoration-none">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="social-icon social-twitter text-white text-decoration-none">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="social-icon social-instagram text-white text-decoration-none">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" style="border-color: rgba(255,255,255,0.3);">
+                <div class="text-center">
+                    <div class="small text-light">Copyright &copy; Nusantara Heritage 2025</div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('mainNav');
+                if (window.scrollY > 100) {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+
+            // Music card animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply animation to music cards
+            document.querySelectorAll('.music-card').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        </script>
+    </body>
+</html>

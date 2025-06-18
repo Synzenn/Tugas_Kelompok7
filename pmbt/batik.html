@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Batik Indonesia - Warisan Budaya Nusantara" />
+        <meta name="author" content="Nusantara Heritage" />
+        <title>Batik Indonesia - Nusantara Heritage</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <style>
+            body { 
+                font-family: 'Poppins', sans-serif; 
+            }
+            
+            .batik-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='15' cy='15' r='8'/%3E%3Ccircle cx='45' cy='15' r='8'/%3E%3Ccircle cx='15' cy='45' r='8'/%3E%3Ccircle cx='45' cy='45' r='8'/%3E%3Cpath d='M30 10 L35 20 L30 30 L25 20 Z'/%3E%3Cpath d='M10 30 L20 35 L30 30 L20 25 Z'/%3E%3Cpath d='M30 50 L35 40 L30 30 L25 40 Z'/%3E%3Cpath d='M50 30 L40 35 L30 30 L40 25 Z'/%3E%3C/g%3E%3C/svg%3E");
+            }
+            
+            .hero-gradient {
+                background: linear-gradient(135deg, #8B4513 0%, #A0522D 25%, #CD853F 50%, #D2691E 75%, #8B4513 100%);
+            }
+            
+            .batik-decorative {
+                background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23DAA520' fill-opacity='0.15'%3E%3Cpath d='M40 0 L50 20 L70 10 L60 30 L80 40 L60 50 L70 70 L50 60 L40 80 L30 60 L10 70 L20 50 L0 40 L20 30 L10 10 L30 20 Z'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3C/g%3E%3C/svg%3E");
+            }
+            
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+            
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+            
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            
+            .navbar-brand {
+                background: linear-gradient(135deg, #DC143C, #FFD700);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+            
+            .navbar {
+                background-color: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            }
+            
+            .nav-link {
+                color: #333 !important;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+            
+            .nav-link:hover {
+                color: #DC143C !important;
+            }
+            
+            .masthead {
+                min-height: 70vh;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .site-heading h1 {
+                font-size: 4rem;
+                color: #FFD700;
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            .site-heading .subheading {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 1.2rem;
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            }
+            
+            .post-preview {
+                background: white;
+                border-radius: 15px;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+            }
+            
+            .post-preview:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            }
+            
+            .btn-primary {
+                background: linear-gradient(135deg, #DC143C, #FF6B6B);
+                border: none;
+                border-radius: 25px;
+                padding: 12px 30px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+            }
+            
+            .btn-primary:hover {
+                background: linear-gradient(135deg, #B91C3C, #EF4444);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(220, 20, 60, 0.4);
+            }
+            
+            .floating-elements {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            
+            .floating-element {
+                position: absolute;
+                opacity: 0.2;
+                animation: float 8s ease-in-out infinite;
+            }
+            
+            .floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: -1s; }
+            .floating-element:nth-child(2) { top: 30%; right: 15%; animation-delay: -2s; }
+            .floating-element:nth-child(3) { bottom: 20%; right: 20%; animation-delay: -3s; }
+            .floating-element:nth-child(4) { bottom: 30%; left: 15%; animation-delay: -4s; }
+            
+            .batik-card {
+                background: white;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transition: all 0.4s ease;
+                border: none;
+            }
+            
+            .batik-card:hover {
+                transform: translateY(-10px) rotateX(5deg);
+                box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            }
+            
+            .batik-image {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+            
+            .batik-card:hover .batik-image {
+                transform: scale(1.1);
+            }
+            
+            .origin-badge {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: linear-gradient(135deg, #DC143C, #FFD700);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+            }
+            
+            .pattern-detail {
+                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                border-radius: 15px;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                border-left: 5px solid #DC143C;
+            }
+            
+            .philosophy-section {
+                background: linear-gradient(135deg, #1a1a2e, #16213e);
+                color: white;
+                border-radius: 20px;
+                padding: 3rem;
+                margin: 3rem 0;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .philosophy-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFD700' fill-opacity='0.05'%3E%3Cpath d='M50 10 L60 30 L80 30 L65 45 L70 65 L50 55 L30 65 L35 45 L20 30 L40 30 Z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+                z-index: 0;
+            }
+            
+            .philosophy-content {
+                position: relative;
+                z-index: 1;
+            }
+            
+            .technique-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1rem;
+                font-size: 1.5rem;
+                color: white;
+                background: linear-gradient(135deg, #f59e0b, #d97706);
+            }
+            
+            footer {
+                background: linear-gradient(135deg, #1f2937, #111827);
+                color: white;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 10px;
+                transition: all 0.3s ease;
+            }
+            
+            .social-icon:hover {
+                transform: translateY(-3px);
+            }
+            
+            .social-facebook { background: linear-gradient(135deg, #4267B2, #365899); }
+            .social-twitter { background: linear-gradient(135deg, #1DA1F2, #1991DA); }
+            .social-instagram { background: linear-gradient(135deg, #E4405F, #C13584); }
+
+            .pattern-grid {
+                background: linear-gradient(45deg, #8B4513 25%, transparent 25%), 
+                           linear-gradient(-45deg, #8B4513 25%, transparent 25%), 
+                           linear-gradient(45deg, transparent 75%, #8B4513 75%), 
+                           linear-gradient(-45deg, transparent 75%, #8B4513 75%);
+                background-size: 20px 20px;
+                background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+                opacity: 0.1;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.php">
+                    <i class="fas fa-circle me-2" style="color: #DC143C;"></i>
+                    Nusantara Heritage
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Beranda</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Budaya
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="batik.html">Batik</a></li>
+                                <li><a class="dropdown-item" href="musik.html">Alat Musik</a></li>
+                                <li><a class="dropdown-item" href="tari.html">Tari Tradisional</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sejarah.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Page Header-->
+        <header class="masthead hero-gradient d-flex align-items-center">
+            <div class="batik-pattern position-absolute w-100 h-100"></div>
+            <div class="pattern-grid position-absolute w-100 h-100"></div>
+            
+            <div class="floating-elements">
+                <div class="floating-element">
+                    <i class="fas fa-palette text-warning" style="font-size: 2rem;"></i>
+                </div>
+                <div class="floating-element">
+                    <i class="fas fa-leaf text-warning" style="font-size: 1.5rem;"></i>
+                </div>
+                <div class="floating-element">
+                    <i class="fas fa-circle text-warning" style="font-size: 1.8rem;"></i>
+                </div>
+                <div class="floating-element">
+                    <i class="fas fa-star text-warning" style="font-size: 1.6rem;"></i>
+                </div>
+            </div>
+            
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading text-center">
+                            <h1><i class="fas fa-palette me-3"></i>Batik Nusantara</h1>
+                            <hr class="my-4" style="border-color: #FFD700; border-width: 3px;">
+                            <span class="subheading">
+                                Seni kain tradisional Indonesia yang diakui UNESCO<br>
+                                sebagai Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <!-- Introduction Section -->
+            <div class="row gx-4 gx-lg-5 justify-content-center py-5">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="display-4 fw-bold text-dark mb-4">Warisan Budaya Tak Ternilai</h2>
+                        <p class="lead text-muted">
+                            Batik merupakan teknik pewarnaan kain dengan menggunakan malam (lilin) untuk menciptakan motif-motif yang sarat makna filosofis dan spiritual. Setiap daerah di Indonesia memiliki corak batik yang unik, mencerminkan kearifan lokal dan identitas budaya masing-masing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batik Gallery Section -->
+            <section id="galeri-batik" class="mb-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark mb-3">Galeri Batik Nusantara</h2>
+                    <p class="lead text-muted">Keindahan motif batik dari berbagai daerah di Indonesia</p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Batik Parang -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="batik-card position-relative">
+                            <div class="origin-badge">Yogyakarta</div>
+                            <div style="background: linear-gradient(45deg, #8B4513, #D2691E); height: 250px; position: relative; overflow: hidden;">
+                                <!-- Gambar Batik -->
+                                <img src="https://sonobudoyo.jogjaprov.go.id/resource/uploads/img/news/header_Screen_Shot_2024-10-06_at_18_37_53.png" alt="Batik Parang" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; position: absolute; top: 0; left: 0; z-index: 0;">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Batik Parang</h4>
+                                <p class="text-muted mb-3">Motif klasik yang melambangkan kekuatan, keberanian, dan perjuangan tanpa henti. Motif ini dulunya hanya boleh dikenakan oleh keluarga kerajaan.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-primary fw-bold">Yogyakarta</small>
+                                    <button class="btn btn-outline-primary btn-sm">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Batik Kawung -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="batik-card position-relative">
+                            <div class="origin-badge">Solo</div>
+                            <div style="background: linear-gradient(135deg, #4A4A4A, #8B4513); height: 250px; position: relative; overflow: hidden;">
+                                <!-- Gambar Batik -->
+                                <img src="https://budaya.jogjaprov.go.id/view_image/view/4254/Filosofi_batik_kawung.width-800.jpg" alt="Batik Kawung" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; position: absolute; top: 0; left: 0; z-index: 0;">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Batik Kawung</h4>
+                                <p class="text-muted mb-3">Motif geometris yang terinspirasi dari buah kawung (kolang-kaling). Melambangkan kesucian hati dan pengendalian diri yang sempurna.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-primary fw-bold">Surakarta</small>
+                                    <button class="btn btn-outline-primary btn-sm">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Batik Mega Mendung -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="batik-card position-relative">
+                            <div class="origin-badge">Cirebon</div>
+                            <div style="background: linear-gradient(180deg, #1E3A8A, #3B82F6, #60A5FA); height: 250px; position: relative; overflow: hidden;">
+                                <!-- Gambar Batik -->
+                                <img src="https://batik-tulis.com/wp-content/uploads/2015/12/batik-mega-mendung-1200x900.jpg" alt="Batik Mega Mendung" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; position: absolute; top: 0; left: 0; z-index: 0;">
+
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Batik Mega Mendung</h4>
+                                <p class="text-muted mb-3">Motif awan yang melambangkan kesabaran dan ketenangan. Menggambarkan sifat yang tidak mudah marah dan selalu berpikir jernih.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-primary fw-bold">Cirebon</small>
+                                    <button class="btn btn-outline-primary btn-sm">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Batik Pekalongan -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="batik-card position-relative">
+                            <div class="origin-badge">Pekalongan</div>
+                            <div style="background: linear-gradient(45deg, #DC2626, #F59E0B, #10B981); height: 250px; position: relative; overflow: hidden;">
+                                <!-- Gambar Batik -->
+                                <img src="https://museumbatikpekalongan.com/img/1731486379_d11ebeb93868f370fd97.jpg" alt="Batik Pekalongan" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; position: absolute; top: 0; left: 0; z-index: 0;">
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Batik Pekalongan</h4>
+                                <p class="text-muted mb-3">Perpaduan motif tradisional dengan pengaruh Tionghoa dan Belanda. Kaya akan warna-warna cerah dengan motif flora dan fauna.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-primary fw-bold">Pekalongan</small>
+                                    <button class="btn btn-outline-primary btn-sm">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Batik Betawi -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="batik-card position-relative">
+                            <div class="origin-badge">Jakarta</div>
+                            <div style="background: linear-gradient(135deg, #7C2D12, #EA580C); height: 250px; position: relative; overflow: hidden;">
+                                <!-- Gambar Batik -->
+                                <img src="https://blog.knitto.co.id/wp-content/uploads/2024/07/Motif-Tumpal-Pada-Batik-Betawi-Baru.jpg" alt="Batik Betawi" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; position: absolute; top: 0; left: 0; z-index: 0;">
+
+                                
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Batik Betawi</h4>
+                                <p class="text-muted mb-3">Menggambarkan kehidupan urban dengan motif ondel-ondel, gambang kromong, dan bangunan khas Betawi yang mencerminkan budaya Jakarta.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-primary fw-bold">Jakarta</small>
+                                    <button class="btn btn-outline-primary btn-sm">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Batik Truntum -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="batik-card position-relative">
+                            <div class="origin-badge">Yogyakarta</div>
+                            <div style="background: linear-gradient(radial-circle, #7C2D12, #D97706, #92400E); height: 250px; position: relative; overflow: hidden;">
+                                 <img src="https://upload.wikimedia.org/wikipedia/id/e/ee/BatikTruntum.JPG" alt="Batik Betawi" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; position: absolute; top: 0; left: 0; z-index: 0;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Batik Truntum</h4>
+                                <p class="text-muted mb-3">Motif bintang-bintang kecil yang melambangkan cinta kasih yang tumbuh kembali. Sering digunakan dalam upacara pernikahan.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-primary fw-bold">Yogyakarta</small>
+                                    <button class="btn btn-outline-primary btn-sm">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Philosophy Section -->
+            <section class="philosophy-section">
+                <div class="philosophy-content">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold text-warning mb-4">Filosofi Batik Nusantara</h2>
+                        <p class="lead">Setiap motif batik mengandung makna mendalam yang mencerminkan pandangan hidup dan kearifan lokal masyarakat Indonesia</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="text-center">
+                                <div class="technique-icon">
+                                    <i class="fas fa-yin-yang"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Keseimbangan Hidup</h4>
+                                <p>Motif-motif batik mengajarkan tentang keseimbangan antara dunia lahir dan batin, antara manusia dengan alam, serta harmoni dalam kehidupan.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="text-center">
+                                <div class="technique-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Cinta dan Kasih Sayang</h4>
+                                <p>Banyak motif batik yang melambangkan cinta, seperti Truntum untuk cinta yang tumbuh kembali, dan Sido Mukti untuk kebahagiaan.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="text-center">
+                                <div class="technique-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Hubungan dengan Alam</h4>
+                                <p>Motif flora dan fauna dalam batik mencerminkan kedekatan masyarakat Indonesia dengan alam dan pentingnya menjaga keseimbangan ekologi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technique Section -->
+            <section class="py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark mb-3">Teknik Pembuatan Batik</h2>
+                    <p class="lead text-muted">Proses pembuatan batik yang memerlukan ketelitian dan kesabaran tinggi</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="pattern-detail">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <div class="technique-icon">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h4 class="fw-bold mb-2">Batik Tulis</h4>
+                                    <p class="mb-0">Teknik tradisional menggunakan canting untuk melukis motif dengan malam (lilin). Proses ini membutuhkan waktu berbulan-bulan untuk satu kain.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pattern-detail">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <div class="technique-icon">
+                                        <i class="fas fa-stamp"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h4 class="fw-bold mb-2">Batik Cap</h4>
+                                    <p class="mb-0">Menggunakan cap tembaga yang sudah dibentuk motif tertentu. Teknik ini lebih cepat namun tetap mempertahankan keindahan batik.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pattern-detail">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <div class="technique-icon">
+                                        <i class="fas fa-tint"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h4 class="fw-bold mb-2">Pewarnaan Alami</h4>
+                                    <p class="mb-0">Menggunakan bahan pewarna dari alam seperti indigo, kunyit, tingi, dan mahoni untuk menghasilkan warna-warna khas batik.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pattern-detail">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <div class="technique-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h4 class="fw-bold mb-2">Proses Nglorod</h4>
+                                    <p class="mb-0">Menghilangkan malam dengan air panas untuk memunculkan motif yang telah dibuat. Proses ini memerlukan keahlian khusus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Regional Origins -->
+            <section class="py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark mb-3">Daerah Asal Batik Indonesia</h2>
+                    <p class="lead text-muted">Setiap daerah memiliki ciri khas batik yang unik dan berkarakter</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="post-preview text-center h-100">
+                            <div class="mb-3">
+                                <i class="fas fa-map-marker-alt text-danger" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="fw-bold text-danger">Yogyakarta</h4>
+                            <p class="text-muted">Parang, Kawung, Truntum, Sido Mukti</p>
+                            <small class="text-muted">Pusat batik klasik dengan motif keraton yang penuh makna filosofis</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="post-preview text-center h-100">
+                            <div class="mb-3">
+                                <i class="fas fa-map-marker-alt text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="fw-bold text-primary">Pekalongan</h4>
+                            <p class="text-muted">Jlamprang, Buketan, Lung-lungan</p>
+                            <small class="text-muted">Batik pesisir dengan warna cerah dan motif beragam pengaruh</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="post-preview text-center h-100">
+                            <div class="mb-3">
+                                <i class="fas fa-map-marker-alt text-success" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="fw-bold text-success">Cirebon</h4>
+                            <p class="text-muted">Mega Mendung, Taman Arum, Paksi Naga Liman</p>
+                            <small class="text-muted">Perpaduan budaya Islam, Jawa, dan Tionghoa yang harmonis</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="post-preview text-center h-100">
+                            <div class="mb-3">
+                                <i class="fas fa-map-marker-alt text-warning" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="fw-bold text-warning">Solo</h4>
+                            <p class="text-muted">Sidomukti, Sidoluhur, Wahyu Tumurun</p>
+                            <small class="text-muted">Batik keraton dengan corak halus dan warna elegan</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold text-dark mb-4">Lestarikan Batik Indonesia</h2>
+                        <p class="lead mb-4">
+                            Mari bersama-sama melestarikan warisan budaya batik Indonesia. Setiap pembelian batik adalah dukungan untuk para pengrajin dan kelestarian tradisi turun-temurun.
+                        </p>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                        <i class="fas fa-check fa-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Dukung Pengrajin Lokal</h5>
+                                        <p class="text-muted mb-0">Beli langsung dari pengrajin untuk mendukung ekonomi kreatif</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                        <i class="fas fa-check fa-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Pelajari Makna Motif</h5>
+                                        <p class="text-muted mb-0">Pahami filosofi dibalik setiap motif batik yang dikenakan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                        <i class="fas fa-check fa-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Ajarkan Generasi Muda</h5>
+                                        <p class="text-muted mb-0">Wariskan pengetahuan batik kepada anak dan cucu</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100 border-0" style="background: linear-gradient(135deg, #DC143C, #FFD700);">
+                            <div class="card-body text-white text-center p-5">
+                                <i class="fas fa-heart mb-4" style="font-size: 4rem;"></i>
+                                <h3 class="card-title fw-bold mb-4">Jatuh Cinta pada Batik</h3>
+                                <p class="card-text mb-4 fs-5">Temukan koleksi batik pilihan dari berbagai daerah</p>
+                                <button class="btn btn-light btn-lg text-danger fw-bold me-3">
+                                    <i class="fas fa-shopping-cart me-2"></i>
+                                    Belanja Batik
+                                </button>
+                                <button class="btn btn-outline-light btn-lg fw-bold">
+                                    <i class="fas fa-book me-2"></i>
+                                    Pelajari Lebih
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Footer-->
+        <footer class="border-top py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 mb-4">
+                        <h5 class="text-warning fw-bold mb-3">Nusantara Heritage</h5>
+                        <p class="text-light mb-3">Melestarikan dan memperkenalkan kekayaan budaya Indonesia kepada dunia.</p>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Budaya</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="batik.html" class="text-light text-decoration-none">Batik</a></li>
+                            <li><a href="musik.html" class="text-light text-decoration-none">Alat Musik</a></li>
+                            <li><a href="tari.html" class="text-light text-decoration-none">Tari Tradisional</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Informasi</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">Tentang Kami</a></li>
+                            <li><a href="sejarah.html" class="text-light text-decoration-none">Sejarah</a></li>
+                            <li><a href="contact.html" class="text-light text-decoration-none">Kontak</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Ikuti Kami</h6>
+                        <div class="text-center">
+                            <a href="#!" class="social-icon social-facebook text-white text-decoration-none">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="social-icon social-twitter text-white text-decoration-none">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="social-icon social-instagram text-white text-decoration-none">
+                                <i class="fab fa-instagram"></i>
+                            </a>  
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" style="border-color: rgba(255,255,255,0.3);">
+                <div class="text-center">
+                    <div class="small text-light">Copyright &copy; Nusantara Heritage 2025</div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('mainNav');
+                if (window.scrollY > 100) {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+
+            // Detail button functionality
+            document.querySelectorAll('.btn-outline-primary').forEach(button => {
+                if (button.textContent.trim() === 'Detail') {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.batik-card');
+                        const title = card.querySelector('h4').textContent;
+                        const description = card.querySelector('p').textContent;
+                        const origin = card.querySelector('.origin-badge').textContent;
+                        
+                        alert(`${title}\n\nAsal: ${origin}\n\n${description}\n\nKlik OK untuk menutup.`);
+                    });
+                }
+            });
+
+            // Add floating animation on scroll
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const floating = document.querySelectorAll('.floating-element');
+                
+                floating.forEach((element, index) => {
+                    const speed = 0.5 + (index * 0.1);
+                    element.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+            });
+        </script>
+    </body>
+</html>

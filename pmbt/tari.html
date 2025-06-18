@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Jelajahi keindahan tari tradisional Indonesia - Nusantara Heritage" />
+    <meta name="author" content="Nusantara Heritage" />
+    <title>Tari Tradisional Indonesia - Nusantara Heritage</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- FontAwesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <style>
+        body {
+            font-family: 'Merriweather Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(236, 72, 153, 0.9));
+            color: white;
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+        
+        .dance-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .dance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .dance-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .dance-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 20px;
+        }
+        
+        .region-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ec4899, #dc2626);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            color: white;
+        }
+        
+        .btn-dance {
+            background: linear-gradient(135deg, #ec4899, #dc2626);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-dance:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+            color: white;
+        }
+        
+        .stats-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.php">
+                    <i class="fas fa-circle me-2" style="color: #DC143C;"></i>
+                    Nusantara Heritage
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Beranda</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4 active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Budaya
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="batik.html">Batik</a></li>
+                                <li><a class="dropdown-item active" href="musik.html">Alat Musik</a></li>
+                                <li><a class="dropdown-item" href="tari.html">Tari Tradisional</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sejarah.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-4">
+                        <i class="fas fa-hands me-3"></i>
+                        Tari Tradisional Indonesia
+                    </h1>
+                    <p class="lead mb-5">
+                        Saksikan keanggunan gerakan tari tradisional Nusantara yang mengisahkan cerita, budaya, dan filosofi hidup masyarakat Indonesia
+                    </p>
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-4">
+                            <div class="stats-card">
+                                <h2 class="fw-bold">700+</h2>
+                                <p class="mb-0">Tarian Tradisional</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stats-card">
+                                <h2 class="fw-bold">34</h2>
+                                <p class="mb-0">Provinsi</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stats-card">
+                                <h2 class="fw-bold">1000+</h2>
+                                <p class="mb-0">Tahun Sejarah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container-fluid px-4 px-lg-5 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Tari Tradisional Grid -->
+                    <div class="row g-5 mb-5">
+                        
+                        <!-- Tari Kecak -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dance-card">
+                                <div class="dance-image" style="background-image: linear-gradient(45deg, #ff6b6b, #ff8e8e), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23ff6b6b%22/><circle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23ff8e8e%22 opacity=%220.7%22/></svg>');">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3uoaRPKdmpsT7CN5i9uYiJKPgVFSPZyad7g&s" alt="Tari Kecak" class="img-fluid w-100 h-100 object-fit-cover">
+                                    <div class="dance-overlay">
+                                        <span class="region-badge">Bali</span>
+                                        <h4 class="fw-bold mt-2">Tari Kecak</h4>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-muted">Tarian sakral yang menceritakan kisah Ramayana dengan gerakan yang enerjik dan suara "cak" yang khas dari puluhan penari pria.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            45-60 menit
+                                        </small>
+                                        <button class="btn btn-dance btn-sm">
+                                            <i class="fas fa-play me-1"></i>
+                                            Tonton
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tari Saman -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dance-card">
+                                <div class="dance-image" style="background-image: linear-gradient(45deg, #4ecdc4, #44a08d), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%234ecdc4%22/><polygon points=%2250,10 90,90 10,90%22 fill=%22%2344a08d%22 opacity=%220.7%22/></svg>');">
+                                    <img src="https://www.anakbisa.com/wp-content/uploads/2023/07/Tari_Saman_di_TMII.jpg" alt="Tari Kecak" class="img-fluid w-100 h-100 object-fit-cover">
+                                    <div class="dance-overlay">
+                                        <span class="region-badge">Aceh</span>
+                                        <h4 class="fw-bold mt-2">Tari Saman</h4>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-muted">Tarian yang diakui UNESCO sebagai Warisan Budaya Takbenda, dengan gerakan cepat dan sinkron yang memukau mata.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            15-20 menit
+                                        </small>
+                                        <button class="btn btn-dance btn-sm">
+                                            <i class="fas fa-play me-1"></i>
+                                            Tonton
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tari Pendet -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dance-card">
+                                
+                                <div class="dance-image" style="background-image: linear-gradient(45deg, #667eea, #764ba2), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23667eea%22/><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22%23764ba2%22 stroke-width=%2210%22 opacity=%220.7%22/></svg>');">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSdjroHGdK1TI6BMPe4Frv9z1ofVluQczP3w&s" alt="Tari Kecak" class="img-fluid w-100 h-100 object-fit-cover">
+                                    <div class="dance-overlay">
+                                        <span class="region-badge">Bali</span>
+                                        <h4 class="fw-bold mt-2">Tari Pendet</h4>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-muted">Tarian penyambutan yang anggun dengan gerakan lemah gemulai, melambangkan rasa syukur dan kegembiraan menyambut tamu.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            10-15 menit
+                                        </small>
+                                        <button class="btn btn-dance btn-sm">
+                                            <i class="fas fa-play me-1"></i>
+                                            Tonton
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tari Jaipong -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dance-card">
+                        
+                                <div class="dance-image" style="background-image: linear-gradient(45deg, #f093fb, #f5576c), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23f093fb%22/><path d=%22M20,20 Q50,5 80,20 Q95,50 80,80 Q50,95 20,80 Q5,50 20,20%22 fill=%22%23f5576c%22 opacity=%220.7%22/></svg>');">
+                                    <img src="data:image/jpeg;base64,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" alt="Tari Kecak" class="img-fluid w-100 h-100 object-fit-cover">
+                                    <div class="dance-overlay">
+                                        <span class="region-badge">Jawa Barat</span>
+                                        <h4 class="fw-bold mt-2">Tari Jaipong</h4>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-muted">Tarian modern yang menggabungkan unsur tradisional dengan gerakan yang dinamis dan enerjik, populer di kalangan muda.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            20-30 menit
+                                        </small>
+                                        <button class="btn btn-dance btn-sm">
+                                            <i class="fas fa-play me-1"></i>
+                                            Tonton
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tari Tor-Tor -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dance-card">
+                    
+                                <div class="dance-image" style="background-image: linear-gradient(45deg, #ffecd2, #fcb69f), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23ffecd2%22/><rect x=%2220%22 y=%2220%22 width=%2260%22 height=%2260%22 fill=%22%23fcb69f%22 opacity=%220.7%22 rx=%2210%22/></svg>');">
+                                    <img src="data:image/jpeg;base64,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" alt="Tari Kecak" class="img-fluid w-100 h-100 object-fit-cover">
+                                    <div class="dance-overlay">
+                                        <span class="region-badge">Sumatera Utara</span>
+                                        <h4 class="fw-bold mt-2">Tari Tor-Tor</h4>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-muted">Tarian sakral suku Batak yang dipercaya dapat memanggil roh leluhur, dengan gerakan yang khas dan penuh makna spiritual.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            30-45 menit
+                                        </small>
+                                        <button class="btn btn-dance btn-sm">
+                                            <i class="fas fa-play me-1"></i>
+                                            Tonton
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tari Legong -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dance-card">
+                                <div class="dance-image" style="background-image: linear-gradient(45deg, #a8edea, #fed6e3), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23a8edea%22/><ellipse cx=%2250%22 cy=%2250%22 rx=%2240%22 ry=%2230%22 fill=%22%23fed6e3%22 opacity=%220.7%22/></svg>');">
+                                    <img src="https://archipelagoid.com/wp-content/uploads/2024/06/Tari-Legong-Pesona-Keindahan-Simbolisme-Gerakan-1.webp" alt="Tari Kecak" class="img-fluid w-100 h-100 object-fit-cover">
+                                    <div class="dance-overlay">
+                                        <span class="region-badge">Bali</span>
+                                        <h4 class="fw-bold mt-2">Tari Legong</h4>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-muted">Tarian klasik Bali yang sangat anggun dan membutuhkan keahlian tinggi, biasanya ditarikan oleh penari wanita muda.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            25-35 menit
+                                        </small>
+                                        <button class="btn btn-dance btn-sm">
+                                            <i class="fas fa-play me-1"></i>
+                                            Tonton
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    
+                    <!-- Feature Section -->
+                    <div class="row g-6 align-items-center mb-5 py-5" style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); border-radius: 20px;">
+                        <div class="col-lg-6 px-4">
+                            <h2 class="display-5 fw-bold text-dark mb-4">Keanggunan Tari Nusantara</h2>
+                            <p class="lead mb-4">
+                                Setiap gerakan tari tradisional Indonesia memiliki makna dan filosofi yang mendalam. Dari gerakan yang mengisahkan legenda hingga yang melambangkan kehidupan sehari-hari, tari tradisional adalah warisan budaya yang hidup.
+                            </p>
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                            <i class="fas fa-video fa-sm"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="fw-bold">Dokumentasi Visual</h5>
+                                            <p class="text-muted mb-0">Merekam setiap gerakan tari untuk pembelajaran dan pelestarian</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                            <i class="fas fa-theater-masks fa-sm"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="fw-bold">Pertunjukan Budaya</h5>
+                                            <p class="text-muted mb-0">Menyelenggarakan pertunjukan tari tradisional secara berkala</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                            <i class="fas fa-chalkboard-teacher fa-sm"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="fw-bold">Pelatihan Tari</h5>
+                                            <p class="text-muted mb-0">Kursus dan workshop tari tradisional untuk semua tingkatan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 px-4">
+                            <div class="card h-100 border-0" style="background: linear-gradient(135deg, #ec4899, #dc2626);">
+                                <div class="card-body text-white text-center p-5">
+                                    <div class="mb-4">
+                                        <i class="fas fa-hands" style="font-size: 4rem; opacity: 0.8;"></i>
+                                    </div>
+                                    <h3 class="card-title fw-bold mb-4">Pelajari Tari Tradisional</h3>
+                                    <p class="card-text mb-4 fs-5">Bergabunglah dengan kelas tari tradisional dan rasakan keindahan budaya Indonesia</p>
+                                    <button class="btn btn-light btn-lg text-danger fw-bold">
+                                        <i class="fas fa-calendar-plus me-2"></i>
+                                        Daftar Kelas
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation to other sections -->
+                    <div class="row g-4 mt-5">
+                        <div class="col-lg-6">
+                            <div class="card border-0 h-100" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-palette mb-3" style="font-size: 3rem;"></i>
+                                    <h4 class="fw-bold mb-3">Jelajahi Batik</h4>
+                                    <p class="mb-4">Temukan keindahan motif dan makna filosofis batik Indonesia</p>
+                                    <a href="batik.html" class="btn btn-light text-warning fw-bold">
+                                        Lihat Batik
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card border-0 h-100" style="background: linear-gradient(135deg, #3b82f6, #7c3aed); color: white;">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-music mb-3" style="font-size: 3rem;"></i>
+                                    <h4 class="fw-bold mb-3">Alat Musik Tradisional</h4>
+                                    <p class="mb-4">Dengarkan harmoni musik tradisional Indonesia</p>
+                                    <a href="musik.html" class="btn btn-light text-primary fw-bold">
+                                        Lihat Musik
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back to Home -->
+                    <div class="d-flex justify-content-center mt-5 pt-4">
+                        <a class="btn btn-primary btn-lg" href="index.html">
+                            <i class="fas fa-home me-2"></i>
+                            Kembali ke Beranda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer-->
+        <footer class="border-top py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 mb-4">
+                        <h5 class="text-warning fw-bold mb-3">Nusantara Heritage</h5>
+                        <p class="text-light mb-3">Melestarikan dan memperkenalkan kekayaan budaya Indonesia kepada dunia.</p>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Budaya</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="batik.html" class="text-light text-decoration-none">Batik</a></li>
+                            <li><a href="musik.html" class="text-light text-decoration-none">Alat Musik</a></li>
+                            <li><a href="tari.html" class="text-light text-decoration-none">Tari Tradisional</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Informasi</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="sejarah.html" class="text-light text-decoration-none">Sejarah</a></li>
+                            <li><a href="contact.html" class="text-light text-decoration-none">Kontak</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="fw-bold mb-3">Ikuti Kami</h6>
+                        <div class="text-center">
+                            <a href="#!" class="social-icon social-facebook text-white text-decoration-none">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="social-icon social-twitter text-white text-decoration-none">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="social-icon social-instagram text-white text-decoration-none">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" style="border-color: rgba(255,255,255,0.3);">
+                <div class="text-center">
+                    <div class="small text-light">Copyright &copy; Nusantara Heritage 2025</div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('mainNav');
+                if (window.scrollY > 100) {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+
+            // Dance card animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply animation to dance cards
+            document.querySelectorAll('.dance-card').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+
+            // Dance button click animation
+            document.querySelectorAll('.btn-dance').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Create ripple effect
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    
+                    // Remove ripple after animation
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                    
+                    // Simulate video play
+                    const icon = this.querySelector('i');
+                    const originalIcon = icon.className;
+                    icon.className = 'fas fa-spinner fa-spin me-1';
+                    this.disabled = true;
+                    
+                    setTimeout(() => {
+                        icon.className = 'fas fa-pause me-1';
+                        this.innerHTML = '<i class="fas fa-pause me-1"></i>Tonton';
+                        this.disabled = false;
+                        
+                        // Reset after 3 seconds
+                        setTimeout(() => {
+                            icon.className = originalIcon;
+                            this.innerHTML = '<i class="fas fa-play me-1"></i>Tonton';
+                        }, 3000);
+                    }, 1000);
+                });
+            });
+
+            // Add CSS for ripple effect
+            const style = document.createElement('style');
+            style.textContent = `
+                .btn-dance {
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                .ripple {
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.6);
+                    transform: scale(0);
+                    animation: ripple-animation 0.6s linear;
+                    pointer-events: none;
+                }
+                
+                @keyframes ripple-animation {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+                
+                .dance-card {
+                    cursor: pointer;
+                }
+                
+                .dance-card:hover .dance-image {
+                    transform: scale(1.05);
+                }
+                
+                .dance-image {
+                    transition: transform 0.3s ease;
+                    
+                }
+                
+                .stats-card:hover {
+                    transform: translateY(-5px);
+                    transition: transform 0.3s ease;
+                }
+                
+                .social-icon {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    margin: 0 5px;
+                    background: rgba(255, 255, 255, 0.1);
+                    transition: all 0.3s ease;
+                }
+                
+                .social-icon:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                    transform: translateY(-2px);
+                    color: white !important;
+                }
+            `;
+            document.head.appendChild(style);
+        </script>
+    </body>
+</html>

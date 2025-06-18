@@ -1,0 +1,57 @@
+/* Tambahkan ini di css/admin.css atau di dalam <style> di kelolauser.php */
+
+.table-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.data-table {
+    border-collapse: separate;
+    border-spacing: 0 8px; /* Memberi jarak antar baris */
+}
+
+.data-table thead th {
+    background-color: transparent;
+    border: none;
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.data-table tbody tr {
+    background-color: #f8f9fa;
+    transition: all 0.2s ease-in-out;
+}
+
+.data-table tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+}
+
+.data-table td, .data-table th {
+    vertical-align: middle;
+}
+
+.data-table .user-avatar-small {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.data-table .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.7em;
+}
+
+.data-table .btn-sm {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
