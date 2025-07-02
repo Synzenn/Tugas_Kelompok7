@@ -7,13 +7,10 @@
         <meta name="author" content="Nusantara Heritage" />
         <title>Alat Musik Tradisional - Nusantara Heritage</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         
         <style>
@@ -22,15 +19,21 @@
             }
             
             .batik-pattern {
-                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='15' cy='15' r='8'/%3E%3Ccircle cx='45' cy='15' r='8'/%3E%3Ccircle cx='15' cy='45' r='8'/%3E%3Ccircle cx='45' cy='45' r='8'/%3E%3Cpath d='M30 10 L35 20 L30 30 L25 20 Z'/%3E%3Cpath d='M10 30 L20 35 L30 30 L20 25 Z'/%3E%3Cpath d='M30 50 L35 40 L30 30 L25 40 Z'/%3E%3Cpath d='M50 30 L40 35 L30 30 L40 25 Z'/%3E%3C/g%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='15' cy='15' r='8'/%3E%3Ccircle cx='45' cy='15' r='8'/%3E%3Ccircle cx='15' cy='45' r='8'/%3E%3Ccircle cx='45' cy='45' r='8'/%3E%3Cpath d='M30 10 L35 20 L30 30 L25 20 Z'/%3E%3Cpath d='M10 30 L20 35 L30 30 L20 25 Z'/%3E%3Cpath d='M30 50 L35 40 L30 30 L25 40 Z'/%3E%3Cpath d='M50 30 L40 35 L30 30 L40 25 Z'/%3E%3C/g%3E%3C/svg%3E");
             }
             
             .hero-gradient {
-                background: linear-gradient(135deg, #1e40af 0%, #3b82f6 25%, #60a5fa 50%, #7c3aed 75%, #1e40af 100%);
+                background: linear-gradient(135deg, #8B4513 0%, #A0522D 25%, #CD853F 50%, #D2691E 75%, #8B4513 100%);
             }
-            
-            .music-decorative {
-                background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237c3aed' fill-opacity='0.15'%3E%3Ccircle cx='20' cy='20' r='8'/%3E%3Ccircle cx='60' cy='20' r='8'/%3E%3Ccircle cx='20' cy='60' r='8'/%3E%3Ccircle cx='60' cy='60' r='8'/%3E%3Cpath d='M40 10 Q50 20 40 30 Q30 20 40 10'/%3E%3Cpath d='M10 40 Q20 50 30 40 Q20 30 10 40'/%3E%3Cpath d='M50 40 Q60 50 70 40 Q60 30 50 40'/%3E%3Cpath d='M40 50 Q50 60 40 70 Q30 60 40 50'/%3E%3C/g%3E%3C/svg%3E");
+
+            .pattern-grid {
+                background: linear-gradient(45deg, #8B4513 25%, transparent 25%), 
+                            linear-gradient(-45deg, #8B4513 25%, transparent 25%), 
+                            linear-gradient(45deg, transparent 75%, #8B4513 75%), 
+                            linear-gradient(-45deg, transparent 75%, #8B4513 75%);
+                background-size: 20px 20px;
+                background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+                opacity: 0.1;
             }
             
             .card-hover {
@@ -75,12 +78,8 @@
                 transition: color 0.3s ease;
             }
             
-            .nav-link:hover {
+            .nav-link:hover, .nav-link.active {
                 color: #DC143C !important;
-            }
-            
-            .nav-link.active {
-                color: #3b82f6 !important;
                 font-weight: 600;
             }
             
@@ -126,29 +125,9 @@
                 left: 0;
                 right: 0;
                 height: 5px;
-                background: linear-gradient(135deg, #3b82f6, #7c3aed);
+                background: linear-gradient(135deg, #DC143C, #FFD700);
             }
-            
-            .music-icon {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 1.5rem;
-                font-size: 2.5rem;
-                color: white;
-                position: relative;
-            }
-            
-            .gamelan-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
-            .angklung-icon { background: linear-gradient(135deg, #10b981, #059669); }
-            .sasando-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
-            .kendang-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
-            .gong-icon { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
-            .suling-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
-            
+
             .region-badge {
                 background: linear-gradient(135deg, #f59e0b, #d97706);
                 color: white;
@@ -161,7 +140,7 @@
             }
             
             .btn-primary {
-                background: linear-gradient(135deg, #3b82f6, #7c3aed);
+                background: linear-gradient(135deg, #DC143C, #FF6B6B);
                 border: none;
                 border-radius: 25px;
                 padding: 12px 30px;
@@ -172,9 +151,9 @@
             }
             
             .btn-primary:hover {
-                background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+                background: linear-gradient(135deg, #B91C3C, #EF4444);
                 transform: translateY(-2px);
-                box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+                box-shadow: 0 10px 25px rgba(220, 20, 60, 0.4);
             }
             
             .floating-elements {
@@ -230,7 +209,6 @@
         </style>
     </head>
     <body>
-        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="index.php">
@@ -261,10 +239,9 @@
             </div>
         </nav>
         
-        <!-- Page Header-->
         <header class="masthead hero-gradient d-flex align-items-center">
             <div class="batik-pattern position-absolute w-100 h-100"></div>
-            <div class="music-decorative position-absolute w-100 h-100" style="opacity: 0.3;"></div>
+            <div class="pattern-grid position-absolute w-100 h-100"></div>
             
             <div class="floating-elements">
                 <div class="floating-element">
@@ -296,15 +273,8 @@
             </div>
         </header>
         
-        <!-- Main Content-->
         <div class="container px-4 px-lg-5 my-5">
-            <!-- Breadcrumb -->
             <nav aria-label="breadcrumb" class="mb-4">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Budaya</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Alat Musik</li>
-                </ol>
             </nav>
             
             <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -314,7 +284,7 @@
                         <p class="lead text-muted">Alat musik tradisional yang menjadi warisan budaya tak ternilai</p>
                     </div>
                     
-                    <div class="row g-4 mb-5">
+                     <div class="row g-4 mb-5">
                         <!-- Gamelan -->
                         <div class="col-lg-6">
                             <div class="music-card card-hover">
@@ -518,12 +488,7 @@
                         </div>
                     </div>
 
-            
-
-
-                    
-                    <!-- Feature Section -->
-                    <div class="row g-5 align-items-center mb-5 py-5" style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); border-radius: 20px;">
+                    <div class="row g-5 align-items-center mb-5 py-5" style="background: linear-gradient(135deg, #FFF7E6, #FFEFE6); border-radius: 20px;">
                         <div class="col-lg-6 px-4">
                             <h2 class="display-5 fw-bold text-dark mb-4">Harmoni Budaya Nusantara</h2>
                             <p class="lead mb-4">
@@ -532,7 +497,7 @@
                             <div class="row g-4">
                                 <div class="col-12">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px; flex-shrink: 0;">
                                             <i class="fas fa-music fa-sm"></i>
                                         </div>
                                         <div>
@@ -543,7 +508,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px; flex-shrink: 0;">
                                             <i class="fas fa-users fa-sm"></i>
                                         </div>
                                         <div>
@@ -554,7 +519,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px; flex-shrink: 0;">
                                             <i class="fas fa-graduation-cap fa-sm"></i>
                                         </div>
                                         <div>
@@ -566,14 +531,14 @@
                             </div>
                         </div>
                         <div class="col-lg-6 px-4">
-                            <div class="card h-100 border-0" style="background: linear-gradient(135deg, #3b82f6, #7c3aed);">
+                            <div class="card h-100 border-0" style="background: linear-gradient(135deg, #DC143C, #FFD700);">
                                 <div class="card-body text-white text-center p-5">
                                     <div class="mb-4">
                                         <i class="fas fa-headphones" style="font-size: 4rem; opacity: 0.8;"></i>
                                     </div>
                                     <h3 class="card-title fw-bold mb-4">Dengarkan Musik Tradisional</h3>
                                     <p class="card-text mb-4 fs-5">Nikmati koleksi audio musik tradisional Indonesia dalam kualitas tinggi</p>
-                                    <button class="btn btn-light btn-lg text-primary fw-bold">
+                                    <button class="btn btn-light btn-lg text-danger fw-bold">
                                         <i class="fas fa-play me-2"></i>
                                         Putar Sekarang
                                     </button>
@@ -581,49 +546,10 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Navigation to other sections -->
-                    <div class="row g-4 mt-5">
-                        <div class="col-lg-6">
-                            <div class="card border-0 h-100" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white;">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-palette mb-3" style="font-size: 3rem;"></i>
-                                    <h4 class="fw-bold mb-3">Jelajahi Batik</h4>
-                                    <p class="mb-4">Temukan keindahan motif dan makna filosofis batik Indonesia</p>
-                                    <a href="batik.html" class="btn btn-light text-warning fw-bold">
-                                        Lihat Batik
-                                        <i class="fas fa-arrow-right ms-2"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card border-0 h-100" style="background: linear-gradient(135deg, #ec4899, #dc2626); color: white;">
-                                <div class="card-body text-center p-4">
-                                    <i class="fas fa-hands mb-3" style="font-size: 3rem;"></i>
-                                    <h4 class="fw-bold mb-3">Tari Tradisional</h4>
-                                    <p class="mb-4">Saksikan keanggunan gerakan tari tradisional Nusantara</p>
-                                    <a href="tari.html" class="btn btn-light text-danger fw-bold">
-                                        Lihat Tari
-                                        <i class="fas fa-arrow-right ms-2"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Back to Home -->
-                    <div class="d-flex justify-content-center mt-5 pt-4">
-                        <a class="btn btn-primary btn-lg" href="index.html">
-                            <i class="fas fa-home me-2"></i>
-                            Kembali ke Beranda
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- Footer-->
         <footer class="border-top py-5">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
@@ -668,7 +594,6 @@
             </div>
         </footer>
         
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         
         <script>

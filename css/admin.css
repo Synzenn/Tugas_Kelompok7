@@ -12,14 +12,31 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #2c3e50; /* Darker primary color */
-    color: white;
+    color: white; /* Warna teks utama di sidebar menjadi putih agar kontras */
+    
+    /* --- PERBAIKAN UTAMA ADA DI SINI --- */
+    /* Latar belakang gradien coklat */
+    background-color: #A0522D; 
+
+    /* Menggabungkan pola batik dan gradien dalam satu properti.
+       Urutan penting: gambar pertama (batik) akan berada di atas gambar kedua (gradien). */
+    background-image: 
+        /* Lapisan 1: Pola Batik SVG */
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='15' cy='15' r='8'/%3E%3Ccircle cx='45' cy='15' r='8'/%3E%3Ccircle cx='15' cy='45' r='8'/%3E%3Ccircle cx='45' cy='45' r='8'/%3E%3Cpath d='M30 10 L35 20 L30 30 L25 20 Z'/%3E%3Cpath d='M10 30 L20 35 L30 30 L20 25 Z'/%3E%3Cpath d='M30 50 L35 40 L30 30 L25 40 Z'/%3E%3Cpath d='M50 30 L40 35 L30 30 L40 25 Z'/%3E%3C/g%3E%3C/svg%3E"),
+        /* Lapisan 2: Gradien Warna Coklat */
+        linear-gradient(135deg, #8B4513 0%, #A0522D 25%, #CD853F 50%, #D2691E 75%, #8B4513 100%);
+
+    /* background-size juga harus dipisah koma jika ada lebih dari 1 gambar. */
+    /* 'auto' untuk pola batik agar ukurannya tidak berubah, 'cover' untuk gradien. */
+    background-size: auto, cover;
+    /* --- AKHIR DARI PERBAIKAN --- */
+
     height: 100vh;
     padding: 20px;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    position: fixed; /* Fixed sidebar */
+    position: fixed;
     top: 0;
     left: 0;
     transition: all 0.3s ease;

@@ -8,23 +8,22 @@
     <title>Tentang - Nusantara Heritage</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     
     <style>
+
+
         :root {
-            --primary-gold: #D4AF37;
+            /* Warna dari tema oranye (tari.html) */
+            --primary-orange: #D2691E;
             --primary-red: #DC143C;
             --primary-brown: #8B4513;
             --accent-gold: #FFD700;
             --dark-brown: #654321;
             --light-cream: #FFF8DC;
-            --batik-pattern: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><pattern id="batik" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="3" fill="rgba(212,175,55,0.1)"/><path d="M0,10 Q5,5 10,10 T20,10" stroke="rgba(220,20,60,0.1)" stroke-width="1" fill="none"/></pattern><rect width="100" height="100" fill="url(%23batik)"/></svg>');
         }
 
         * {
@@ -35,43 +34,34 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #8B4513 0%, #D4AF37 50%, #DC143C 100%);
+            background-color: #f8f9fa; /* Latar belakang netral */
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
         }
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--batik-pattern);
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        /* Custom Bootstrap overrides */
-        .text-primary { color: var(--primary-gold) !important; }
-        .bg-primary { background-color: var(--primary-gold) !important; }
+        /* Tombol Utama disesuaikan dengan tema oranye */
         .btn-primary { 
-            background: linear-gradient(45deg, var(--primary-gold), var(--accent-gold));
+            background: linear-gradient(135deg, #DC143C, #FF6B6B);
             border: none;
-            color: var(--dark-brown);
+            color: white;
             font-weight: 600;
+            border-radius: 25px;
+            padding: 12px 30px;
         }
         .btn-primary:hover {
-            background: linear-gradient(45deg, var(--accent-gold), var(--primary-gold));
+            background: linear-gradient(135deg, #B91C3C, #EF4444);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 25px rgba(220, 20, 60, 0.4);
         }
 
-        /* Header dengan motif batik */
+        /* Header dengan tema oranye dan motif batik */
         .hero-section {
-            background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(212, 175, 55, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><pattern id="batik-hero" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><circle cx="20" cy="20" r="3" fill="rgba(255,255,255,0.1)"/><path d="M0,20 Q10,10 20,20 T40,20" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/><path d="M20,0 Q30,10 20,20 T20,40" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/></pattern></defs><rect width="200" height="200" fill="url(%23batik-hero)"/></svg>');
+            background: 
+                /* Lapisan motif batik (diambil dari body::before) */
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFF8DC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='15' cy='15' r='8'/%3E%3Ccircle cx='45' cy='15' r='8'/%3E%3Ccircle cx='15' cy='45' r='8'/%3E%3Ccircle cx='45' cy='45' r='8'/%3E%3C/g%3E%3C/svg%3E"),
+                /* Lapisan gradient oranye */
+                linear-gradient(135deg, #8B4513 0%, #A0522D 25%, #CD853F 50%, #D2691E 75%, #8B4513 100%);
             min-height: 60vh;
             display: flex;
             align-items: center;
@@ -108,64 +98,54 @@
             font-family: 'Playfair Display', serif;
             font-size: 4rem;
             font-weight: 800;
-            background: linear-gradient(45deg, #FFD700, #FFF8DC, #D4AF37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: var(--accent-gold);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
             margin-bottom: 1rem;
         }
 
         .hero-subtitle {
             font-size: 1.3rem;
-            color: #FFF8DC;
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 400;
             margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
 
-        /* Navigation dengan ornamen */
+        /* Navbar disesuaikan */
         .navbar-custom {
-            background: rgba(255, 248, 220, 0.95) !important;
+            background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(139, 69, 19, 0.3);
-            border-bottom: 3px solid var(--primary-gold);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
-
         .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
         .navbar-nav .nav-link {
-            color: white;
+            color: #333 !important;
             font-weight: 500;
-            margin: 0 10px;
-            padding: 10px 20px !important;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            position: relative;
+            transition: color 0.3s ease;
         }
-
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            background: linear-gradient(45deg, var(--primary-gold), var(--accent-gold));
-            color: white !important;
-            transform: translateY(-2px);
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: var(--primary-red) !important;
+            font-weight: 600;
         }
-
-        /* News Cards dengan ornamen batik */
+        
+        /* Kartu Berita dengan style baru */
         .news-card {
-            background: rgba(255, 248, 220, 0.95);
+            background: white;
             border: none;
             border-radius: 20px;
             overflow: hidden;
             transition: all 0.4s ease;
             position: relative;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-
         .news-card::before {
             content: '';
             position: absolute;
@@ -173,28 +153,22 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--primary-red), var(--primary-gold));
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-gold));
         }
-
         .news-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
-
         .news-card .card-header {
-            background: linear-gradient(135deg, var(--primary-gold), var(--accent-gold));
-            color: var(--dark-brown);
+            background: none;
+            border-bottom: 1px solid #eee;
+            color: var(--primary-brown);
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             font-size: 1.1rem;
-            border: none;
-            padding: 15px 20px;
+            padding: 15px 25px;
         }
-
-        .news-card .card-body {
-            padding: 25px;
-        }
-
+        .news-card .card-body { padding: 25px; }
         .news-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
@@ -203,20 +177,17 @@
             margin-bottom: 15px;
             line-height: 1.4;
         }
-
         .news-date {
             color: var(--primary-red);
             font-size: 0.9rem;
             font-weight: 500;
             margin-bottom: 15px;
         }
-
         .news-content {
             color: #555;
             line-height: 1.7;
             margin-bottom: 20px;
         }
-
         .news-category {
             display: inline-block;
             padding: 8px 16px;
@@ -226,60 +197,40 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
         .category-national {
-            background: linear-gradient(45deg, var(--primary-red), #FF6B6B);
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+        }
+        .category-international {
+            background: linear-gradient(135deg, #4267B2, #365899);
             color: white;
         }
 
-        .category-international {
-            background: linear-gradient(45deg, var(--primary-gold), var(--accent-gold));
-            color: var(--dark-brown);
-        }
-
-        /* Organization Cards dengan desain candi */
+        /* Kartu Organisasi dengan style baru */
         .org-card {
-            background: rgba(255, 248, 220, 0.95);
+            background: white;
             border: none;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
             height: 100%;
-            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            padding: 2rem;
         }
-
-        .org-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .org-card:hover::before {
-            opacity: 1;
-        }
-
         .org-card:hover {
-            transform: translateY(-8px) rotate(2deg);
-            box-shadow: 0 15px 35px rgba(139, 69, 19, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
-
         .org-icon {
             font-size: 3rem;
-            background: linear-gradient(45deg, var(--primary-gold), var(--accent-gold));
+            background: linear-gradient(45deg, var(--primary-orange), var(--accent-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
             display: block;
         }
-
         .org-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
@@ -287,47 +238,34 @@
             color: var(--dark-brown);
             margin-bottom: 15px;
         }
-
         .org-description {
             color: #666;
             font-size: 0.9rem;
             line-height: 1.6;
         }
 
-        /* Statistics Section */
+        /* Bagian Statistik dengan tema oranye */
         .stats-section {
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(212, 175, 55, 0.9));
-            color: white;
+            background: #fff8f0; /* Warna krem lembut */
+            color: var(--dark-brown);
             padding: 60px 0;
-            margin: 50px 0;
+            margin-top: -80px; /* Agar menjorok ke header */
             position: relative;
+            z-index: 10;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
         }
-
-        .stats-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><pattern id="stats-pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="12.5" cy="12.5" r="2" fill="rgba(255,255,255,0.1)"/><rect x="10" y="10" width="5" height="5" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern><rect width="100" height="100" fill="url(%23stats-pattern)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .stat-item {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
+        .stat-item { text-align: center; position: relative; }
         .stat-number {
             font-size: 3rem;
             font-weight: 800;
             font-family: 'Playfair Display', serif;
             margin-bottom: 10px;
-            color: var(--accent-gold);
+            color: var(--primary-orange);
         }
-
         .stat-label {
             font-size: 1.1rem;
             font-weight: 500;
@@ -335,12 +273,8 @@
             letter-spacing: 1px;
         }
 
-        /* Timeline Section */
-        .timeline {
-            position: relative;
-            padding: 0;
-        }
-
+        /* Timeline disesuaikan */
+        .timeline { position: relative; padding: 0; }
         .timeline::before {
             content: '';
             position: absolute;
@@ -348,55 +282,31 @@
             left: 50%;
             width: 4px;
             height: 100%;
-            background: linear-gradient(to bottom, var(--primary-gold), var(--primary-red));
+            background: linear-gradient(to bottom, var(--accent-gold), var(--primary-red));
             transform: translateX(-50%);
         }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 50px;
-            width: 50%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 40px;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 40px;
-            text-align: left;
-        }
-
+        .timeline-item { position: relative; margin-bottom: 50px; width: 50%; }
+        .timeline-item:nth-child(odd) { left: 0; padding-right: 40px; text-align: right; }
+        .timeline-item:nth-child(even) { left: 50%; padding-left: 40px; text-align: left; }
         .timeline-dot {
             position: absolute;
             top: 20px;
             width: 20px;
             height: 20px;
-            background: var(--primary-gold);
+            background: var(--accent-gold);
             border: 4px solid white;
             border-radius: 50%;
-            box-shadow: 0 0 0 4px var(--primary-gold);
+            box-shadow: 0 0 0 4px var(--primary-red);
         }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            right: -12px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -12px;
-        }
-
+        .timeline-item:nth-child(odd) .timeline-dot { right: -12px; }
+        .timeline-item:nth-child(even) .timeline-dot { left: -12px; }
         .timeline-content {
-            background: rgba(255, 248, 220, 0.95);
+            background: white;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             position: relative;
         }
-
         .timeline-content::before {
             content: '';
             position: absolute;
@@ -405,25 +315,22 @@
             height: 0;
             border: 10px solid transparent;
         }
-
         .timeline-item:nth-child(odd) .timeline-content::before {
             right: -20px;
-            border-left-color: rgba(255, 248, 220, 0.95);
+            border-left-color: white;
         }
-
         .timeline-item:nth-child(even) .timeline-content::before {
             left: -20px;
-            border-right-color: rgba(255, 248, 220, 0.95);
+            border-right-color: white;
         }
 
-        /* Footer dengan ornamen */
+        /* Footer dengan style baru */
         .footer {
-            background: linear-gradient(135deg, var(--dark-brown), var(--primary-brown));
+            background: linear-gradient(135deg, #1f2937, #111827);
             color: var(--light-cream);
             padding: 50px 0 30px;
             position: relative;
         }
-
         .footer::before {
             content: '';
             position: absolute;
@@ -431,15 +338,14 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--primary-red), var(--primary-gold));
+            background: linear-gradient(90deg, var(--accent-gold), var(--primary-red), var(--accent-gold));
         }
-
         .social-links a {
             display: inline-block;
             width: 50px;
             height: 50px;
-            background: linear-gradient(45deg, var(--primary-gold), var(--accent-gold));
-            color: var(--dark-brown);
+            background: rgba(255,255,255,0.1);
+            color: white;
             text-align: center;
             line-height: 50px;
             border-radius: 50%;
@@ -447,139 +353,63 @@
             transition: all 0.3s ease;
             font-size: 1.2rem;
         }
-
         .social-links a:hover {
             transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            background: linear-gradient(45deg, var(--primary-red), var(--accent-gold));
+            box-shadow: 0 10px 20px rgba(220, 20, 60, 0.3);
         }
 
-        /* Responsive Design */
+        /* Responsive Design (Struktur asli dipertahankan) */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .timeline::before {
-                left: 20px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                left: 0 !important;
-                padding-left: 60px !important;
-                padding-right: 0 !important;
-                text-align: left !important;
-            }
-            
-            .timeline-dot {
-                left: 10px !important;
-            }
-            
-            .timeline-content::before {
-                left: -20px !important;
-                border-right-color: rgba(255, 248, 220, 0.95) !important;
-                border-left-color: transparent !important;
-            }
+            .hero-title { font-size: 2.5rem; }
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; left: 0 !important; padding-left: 60px !important; padding-right: 0 !important; text-align: left !important; }
+            .timeline-dot { left: 10px !important; }
+            .timeline-content::before { left: -20px !important; border-right-color: white !important; border-left-color: transparent !important; }
+            .stats-section { width: 95%; margin-top: 20px;}
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 0.8s ease-out;
-        }
-
-        .slide-in-right {
-            animation: slideInRight 0.8s ease-out;
-        }
-
-        /* Scrollbar styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--light-cream);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, var(--primary-gold), var(--primary-red));
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, var(--accent-gold), var(--primary-gold));
-        }
+        /* Animasi */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out; }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        .slide-in-left { animation: slideInLeft 0.8s ease-out; }
+        .slide-in-right { animation: slideInRight 0.8s ease-out; }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.php">
-                    <i class="fas fa-circle me-2" style="color: #000000;"></i>
-                    Nusantara Heritage
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Beranda</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Budaya
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="batik.html">Batik</a></li>
-                                <li><a class="dropdown-item" href="musik.html">Alat Musik</a></li>
-                                <li><a class="dropdown-item" href="tari.html">Tari Tradisional</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sejarah.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Kontak</a></li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.php">
+                <i class="fas fa-circle me-2" style="color: #DC143C;"></i>
+                Nusantara Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Budaya
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="batik.html">Batik</a></li>
+                            <li><a class="dropdown-item" href="musik.html">Alat Musik</a></li>
+                            <li><a class="dropdown-item" href="tari.html">Tari Tradisional</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 active" href="sejarah.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Kontak</a></li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center">
@@ -587,10 +417,10 @@
                     <h1 class="hero-title fade-in-up">Tentang Kami</h1>
                     <p class="hero-subtitle fade-in-up">Menjembatani Masa Lalu dengan Masa Depan Melalui Pelestarian Budaya Nusantara</p>
                     <div class="fade-in-up">
-                        <a href="#berita" class="btn btn-primary btn-lg me-3">
+                        <a href="#berita" class="btn btn-primary me-3">
                             <i class="fas fa-newspaper me-2"></i>Berita Terkini
                         </a>
-                        <a href="#organisasi" class="btn btn-outline-light btn-lg">
+                        <a href="#organisasi" class="btn btn-outline-light">
                             <i class="fas fa-users me-2"></i>Organisasi Mitra
                         </a>
                     </div>
@@ -599,53 +429,51 @@
         </div>
     </section>
 
-    <!-- Statistics Section -->
     <section class="stats-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-item fade-in-up">
-                        <div class="stat-number" data-target="1340">0</div>
+                        <div class="stat-number" data-target="911">0</div>
                         <div class="stat-label">Suku Bangsa</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-item fade-in-up">
-                        <div class="stat-number" data-target="718">0</div>
+                        <div class="stat-number" data-target="488">0</div>
                         <div class="stat-label">Bahasa Daerah</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-item fade-in-up">
-                        <div class="stat-number" data-target="3000">0</div>
+                        <div class="stat-number" data-target="2040">0</div>
                         <div class="stat-label">Tarian Tradisional</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-item fade-in-up">
-                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-number" data-target="8">0</div>
                         <div class="stat-label">Warisan UNESCO</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section class="py-5" id="about">
-        <div class="container">
+    
+    <main class="container py-5">
+    <section id="about">
             <div class="row mb-5">
                 <div class="col-lg-12 text-center">
                     <h2 class="display-4 mb-4" style="font-family: 'Playfair Display', serif; color: var(--dark-brown);">
-                        <i class="fas fa-lotus me-3"></i>Visi & Misi Kami
+                        <i class="fas fa-landmark me-3"></i>Visi & Misi Kami
                     </h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <div class="card h-100 border-0 shadow-lg" style="background: rgba(255, 248, 220, 0.95);">
-                        <div class="card-body p-4">
-                            <h3 class="card-title text-center mb-4" style="color: var(--primary-red); font-family: 'Playfair Display', serif;">
+                    <div class="news-card h-100">
+                         <div class="card-body p-4 text-center">
+                            <h3 class="card-title mb-4" style="color: var(--primary-red); font-family: 'Playfair Display', serif;">
                                 <i class="fas fa-eye fa-2x mb-3 d-block"></i>Visi
                             </h3>
                             <p class="card-text" style="font-size: 1.1rem; line-height: 1.8; text-align: justify;">
@@ -655,12 +483,12 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
-                    <div class="card h-100 border-0 shadow-lg" style="background: rgba(255, 248, 220, 0.95);">
-                        <div class="card-body p-4">
-                            <h3 class="card-title text-center mb-4" style="color: var(--primary-gold); font-family: 'Playfair Display', serif;">
+                    <div class="news-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <h3 class="card-title mb-4" style="color: var(--primary-orange); font-family: 'Playfair Display', serif;">
                                 <i class="fas fa-bullseye fa-2x mb-3 d-block"></i>Misi
                             </h3>
-                            <ul style="font-size: 1.1rem; line-height: 1.8;">
+                            <ul style="font-size: 1.1rem; line-height: 1.8; text-align: left;">
                                 <li>Mendokumentasikan dan melestarikan kekayaan budaya Nusantara</li>
                                 <li>Menyediakan informasi terkini tentang perkembangan budaya Indonesia</li>
                                 <li>Memfasilitasi dialog antara tradisi dan modernitas</li>
@@ -670,10 +498,8 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
-    <!-- News Section -->
     <section class="py-5 bg-light" id="berita">
         <div class="container">
             <div class="row mb-5">
@@ -687,7 +513,6 @@
 
             <div class="row">
                 <div class="col-lg-8">
-                    <!-- Featured News -->
                     <div class="card news-card mb-4">
                         <div class="card-header">
                             <i class="fas fa-star me-2"></i>Berita Utama
@@ -707,7 +532,6 @@
                         </div>
                     </div>
 
-                    <!-- Regular News -->
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="card news-card">
@@ -802,10 +626,9 @@
                     </div>
                 </div>
 
-                <!-- Sidebar -->
                 <div class="col-lg-4">
-                    <div class="card border-0 shadow-lg mb-4" style="background: rgba(255, 248, 220, 0.95);">
-                        <div class="card-header" style="background: linear-gradient(135deg, var(--primary-gold), var(--accent-gold)); color: var(--dark-brown);">
+                    <div class="card news-card mb-4">
+                        <div class="card-header">
                             <h5 class="mb-0"><i class="fas fa-fire me-2"></i>Trending Topics</h5>
                         </div>
                         <div class="card-body">
@@ -834,7 +657,7 @@
                         </div>
                     </div>
 
-                    <div class="card border-0 shadow-lg mb-4" style="background: rgba(255, 248, 220, 0.95);">
+                    <div class="card news-card mb-4">
                         <div class="card-header" style="background: linear-gradient(135deg, var(--primary-red), #FF6B6B); color: white;">
                             <h5 class="mb-0"><i class="fas fa-calendar-week me-2"></i>Event Mendatang</h5>
                         </div>
@@ -861,7 +684,6 @@
         </div>
     </section>
 
-    <!-- Timeline Section -->
     <section class="py-5" id="timeline">
         <div class="container">
             <div class="row mb-5">
@@ -931,7 +753,6 @@
         </div>
     </section>
 
-    <!-- Organizations Section -->
     <section class="py-5 bg-light" id="organisasi">
         <div class="container">
             <div class="row mb-5">
@@ -943,7 +764,6 @@
                 </div>
             </div>
 
-            <!-- Government Organizations -->
             <div class="row mb-5">
                 <div class="col-12">
                     <h3 class="text-center mb-4" style="color: var(--primary-red); font-family: 'Playfair Display', serif;">
@@ -988,7 +808,6 @@
                 </div>
             </div>
 
-            <!-- International Organizations -->
             <div class="row mb-5">
                 <div class="col-12">
                     <h3 class="text-center mb-4" style="color: var(--primary-red); font-family: 'Playfair Display', serif;">
@@ -1024,7 +843,6 @@
                 </div>
             </div>
 
-            <!-- Cultural Organizations -->
             <div class="row">
                 <div class="col-12">
                     <h3 class="text-center mb-4" style="color: var(--primary-red); font-family: 'Playfair Display', serif;">
@@ -1070,8 +888,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
+</main>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -1085,7 +902,6 @@
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4">
@@ -1094,7 +910,6 @@
                         <li><a href="#" class="text-light text-decoration-none">Beranda</a></li>
                         <li><a href="#" class="text-light text-decoration-none">Tentang</a></li>
                         <li><a href="#" class="text-light text-decoration-none">Budaya</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Berita</a></li>
                         <li><a href="#" class="text-light text-decoration-none">Kontak</a></li>
                     </ul>
                 </div>
@@ -1104,8 +919,6 @@
                         <li><a href="#" class="text-light text-decoration-none">Tari Tradisional</a></li>
                         <li><a href="#" class="text-light text-decoration-none">Musik Nusantara</a></li>
                         <li><a href="#" class="text-light text-decoration-none">Kerajinan</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Kuliner</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Festival</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -1115,89 +928,77 @@
                     <p class="mb-2"><i class="fas fa-phone me-2"></i>+62 274 123456</p>
                 </div>
             </div>
-            <hr style="border-color: var(--primary-gold);">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 Nusantara Heritage. Bangga Melestarikan Budaya Indonesia.</p>
-                </div>
-            </div>
+            <hr style="border-color: var(--accent-gold);">
+            <div class="row"><div class="col-12 text-center"><p class="mb-0">&copy; 2025 Nusantara Heritage. Bangga Melestarikan Budaya Indonesia.</p></div></div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const increment = target / 100;
-                let current = 0;
-                
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        counter.textContent = target.toLocaleString();
-                        clearInterval(timer);
-                    } else {
-                        counter.textContent = Math.floor(current).toLocaleString();
-                    }
-                }, 20);
-            });
-        }
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('stats-section')) {
-                        animateCounters();
-                    }
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements
         document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .stats-section');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
+            // Counter Animation
+            function animateCounters() {
+                const counters = document.querySelectorAll('.stat-number');
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    if (counter.textContent === target.toLocaleString()) return; // Already animated
+                    
+                    const increment = target / 100;
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target.toLocaleString();
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current).toLocaleString();
+                        }
+                    }, 20);
+                });
+            }
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            let animated = false;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('stats-section') && !animated) {
+                            animateCounters();
+                            animated = true; // Animate only once
+                        }
+                        // Add class to trigger animation defined in CSS
+                        if(entry.target.classList.contains('fade-in-up') || entry.target.classList.contains('slide-in-left') || entry.target.classList.contains('slide-in-right')){
+                           entry.target.style.opacity = 1;
+                           entry.target.style.transform = 'translate(0,0)';
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements with animations
+            const elementsToAnimate = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
+            elementsToAnimate.forEach(el => {
+                el.style.opacity = 0; // Set initial state for animation
+                if(el.classList.contains('fade-in-up')) el.style.transform = 'translateY(30px)';
+                if(el.classList.contains('slide-in-left')) el.style.transform = 'translateX(-50px)';
+                if(el.classList.contains('slide-in-right')) el.style.transform = 'translateX(50px)';
+                el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
                 observer.observe(el);
             });
-
-            // News card hover effects
-            const newsCards = document.querySelectorAll('.news-card');
-            newsCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
-            // Organization card click effects
-            const orgCards = document.querySelectorAll('.org-card');
-            orgCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    this.style.transform = 'translateY(-8px) rotate(2deg) scale(0.98)';
-                    setTimeout(() => {
-                        this.style.transform = 'translateY(-8px) rotate(2deg)';
-                    }, 150);
-                });
-            });
-
+            
+            // Observe stats section
+            const statsSection = document.querySelector('.stats-section');
+            if(statsSection) {
+                 observer.observe(statsSection);
+            }
+            
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -1211,28 +1012,7 @@
                     }
                 });
             });
-
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const heroSection = document.querySelector('.hero-section');
-                if (heroSection) {
-                    heroSection.style.transform = `translateY(${scrolled * 0.3}px)`;
-                }
-            });
-
-            // Add loading animation
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 0.5s ease-in-out';
-                document.body.style.opacity = '1';
-            }, 100);
         });
-
-        // Dynamic background pattern
-        setInterval(() => {
-            const body = document.body;
-            body.style.setProperty('--batik-opacity', Math.sin(Date.now() * 0.001) * 0.05 + 0.1);
-        }, 100);
     </script>
 </body>
 </html>

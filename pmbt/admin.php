@@ -25,8 +25,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
             <ul>
                 <li class="nav-item active"><a href="admin.php" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                 <li class="nav-item"><a href="kelolauser.php" class="nav-link"><i class="fas fa-users"></i><span>Kelola User</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-file-alt"></i><span>Kelola Konten</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan</span></a></li>
             </ul>
         </nav>
         <div class="sidebar-footer">

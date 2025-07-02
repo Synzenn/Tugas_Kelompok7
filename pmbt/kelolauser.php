@@ -23,14 +23,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <h3><i class="fas fa-crown"></i> Admin Panel</h3>
-            <button class="sidebar-toggle" onclick="kelolaUser.toggleSidebar()"><i class="fas fa-bars"></i></button>
         </div>
         <nav class="sidebar-nav">
             <ul>
                 <li class="nav-item"><a href="admin.php" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                 <li class="nav-item active"><a href="kelolauser.php" class="nav-link"><i class="fas fa-users"></i><span>Kelola User</span></a></li>
-                <li class="nav-item"><a href="#" onclick="kelolaUser.showAlert('info', 'Fitur ini akan dikembangkan.')" class="nav-link"><i class="fas fa-file-alt"></i><span>Kelola Konten</span></a></li>
-                <li class="nav-item"><a href="#" onclick="kelolaUser.showAlert('info', 'Fitur ini akan dikembangkan.')" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan</span></a></li>
             </ul>
         </nav>
         <div class="sidebar-footer">

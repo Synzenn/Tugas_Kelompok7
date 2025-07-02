@@ -37,7 +37,7 @@ session_start();
                                 <li><a class="dropdown-item" href="tari.html">Tari Tradisional</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sejarah.html">Sejarah</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sejarah.html">About</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Kontak</a></li>
                         <?php if ($_SESSION['role'] === 'admin'): ?>
                             <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="admin.php">Admin Dashboard</a></li>
@@ -73,7 +73,7 @@ session_start();
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading text-center">
-                        <h1>Batik Nusantara</h1>
+                        <h1>Budaya Nusantara</h1>
                         <hr class="my-4" style="border-color: #FFD700; border-width: 3px;">
                         <span class="subheading">
                             Keindahan seni tradisional Indonesia yang sarat makna dan filosofi,<br>
